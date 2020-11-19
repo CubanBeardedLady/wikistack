@@ -25,7 +25,7 @@ app.use('/wiki', wikiRouter);
 
 // Default Route
 app.get("/", async (req, res, next) => {
-  res.send(layout("Yo dude"));
+  res.redirect('/wiki');
 });
 
 // Listen

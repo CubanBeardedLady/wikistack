@@ -1,12 +1,13 @@
 // Packages
 const express = require("express");
 const router = express.Router();
+const { layout } = require("../views");
 // const router = require('express').Router();
 const { addPage } = require('../views');
 
 // Routes
 router.get("/", async (req, res, next) => {
-  res.send("got to GET /wiki");
+  res.send(layout("got to GET /wiki"));
 });
 
 router.post("/", async (req, res, next) => {
